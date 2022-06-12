@@ -43,7 +43,6 @@ class UserClass {
         return false
     }
 
-    //obsoleto
     listUser = async function () {
         const user = await User
             .find()
@@ -77,9 +76,6 @@ class UserClass {
         }
     }
 
-
-
-    //eliminar usuario 
     deleteUser = async function (owner) {
         User.deleteOne({ "owner": owner }, function (err) {
             if (err) return handleError(err);

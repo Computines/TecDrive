@@ -47,21 +47,32 @@ class FileClass {
 
     listUsersFile = async function (owner) {
         const files = await File
-            .find({}, { "owner": owner })
-            .select("fileName tag route")
+            .find({ "owner": owner })
+            .select("owner fileName tag route")
         console.log(files);
         return files
     }
 
+    changeFileName = async function (fileName, newFileName, route, owner) {
+        try {
+            const file = await File.findOneAndUpdate({ 'fileName': fileName, "route": route, 'owner': owner }, {$set:{"fileName": newFileName}})
+            await file.save();
+        } catch (err) {
+            console.log("Ha ocurrido un error en la busqueda del archivo")
+        }
+
+    }
+
     addTagToFile = async function (fileName, tag, route, owner) {
         try {
-            const file = await File.findOneAndUpdate({ 'fileName': fileName, "route": route, 'owner': owner }, { $set: { "tag": tag } });
+            const file = await File.findOneAndUpdate({ 'fileName': fileName, "route": route, 'owner': owner }, {$set:{"tag":tag}})
             file.save();
         } catch (err) {
             console.log("Ha ocurrido un error en la busqueda del archivo")
         }
 
     }
+    
 
     deleteFile = async function (fileName, route, owner) {
         File.deleteOne({ "fileName": fileName, "route": route, "owner": owner }, function (err) {
