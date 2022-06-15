@@ -1,5 +1,5 @@
-#include "huffman.hpp"
-#include "huffman.cpp"
+#include "huffman/huffman.hpp"
+#include "huffman/huffman.cpp"
 
 
 int main()
