@@ -22,13 +22,13 @@ console.log("findByName")
 // userClass.createUser("Juan", "Navarro", "JuanNava", "blabla", "juanignava@email.com")
 // userClass.createUser("Geovanny", "Garcia", "Geo", "blabla", "geogardow@email.com")
 
-// fileClass.createFile("DiagramaClases", ["Urgente","No urge"], "./Documents", "Diani08")
+// fileClass.createFile("DiagramaClases", ["Urgente","No urge"], "./Documents", "Diani08", 512)
 
-// fileClass.createFile("ProyectoFinal", "TEC", "./Documents", "Ramsensei")
+// fileClass.createFile("ProyectoFinal", "TEC", "./Documents", "Ramsensei", 256)
 
-// fileClass.createFile("ProyectoLabActivos", "Listo", "./Documents/TEC/SemestreI2022", "Diani08")
+// fileClass.createFile("ProyectoLabActivos", "Listo", "./Documents/TEC/SemestreI2022", "Diani08", 2048)
 
-// fileClass.createFile("ProyectoLabActivos", "", "./Documents/TEC/SemestreI2022", "Rei1007")
+// fileClass.createFile("ProyectoLabActivos", "", "./Documents/TEC/SemestreI2022", "Rei1007", 2048)
 
 // fileClass.findFileByTag("Urgente", "Diani08")
 
@@ -38,11 +38,11 @@ console.log("findByName")
 
 // userClass.findUser("Rei1007")
 
-fileClass.changeFileName("ProyectoLabActivos", "nuevoProyectoActivos","./Documents/TEC/SemestreI2022", "Diani08")
+// fileClass.changeFileName("ProyectoLabActivos", "nuevoProyectoActivos","./Documents/TEC/SemestreI2022", "Diani08")
 
 // userClass.changePassword("JuanNava", "blabla", "newBlabla")
 
-fileClass.listUsersFile("Diani08")
+// fileClass.listUsersFile("Diani08")
 
 // userClass.verifyLogInWithUsername("Diani08", "blabla")
 

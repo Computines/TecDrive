@@ -17,7 +17,7 @@ class FileClass {
         return file
     }
 
-    createFile = async function (fileName, tag, route, owner) {
+    createFile = async function (fileName, tag, route, owner, size) {
         try {
             const user = await User.find({ "username": owner })
             console.log(user)
@@ -26,7 +26,8 @@ class FileClass {
                     fileName,
                     tag,
                     route,
-                    owner
+                    owner,
+                    size
                 })
                 const result = await file.save();
                 console.log("Se agregar lo siguiente:")
