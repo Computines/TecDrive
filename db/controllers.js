@@ -35,9 +35,12 @@ console.log("findByName")
 // fileClass.addTagToFile("ProyectoLabActivos", "LISTO", "./Documents/TEC/SemestreI2022", "Rei1007" )
 
 // fileClass.listFile()
+async function main() {
+    const user_finded = await userClass.findUser("Rei1007")
+    console.log(user_finded)
+}
 
-// userClass.findUser("Rei1007")
-
+main()
 // fileClass.changeFileName("ProyectoLabActivos", "nuevoProyectoActivos","./Documents/TEC/SemestreI2022", "Diani08")
 
 // userClass.changePassword("JuanNava", "blabla", "newBlabla")

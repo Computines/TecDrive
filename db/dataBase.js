@@ -6,6 +6,6 @@ const mongoose = require('mongoose');
 // .then(() => console.log('Now connected to MongoDB!'))
 // .catch(err => console.error('Something went wrong', err));
 
-mongoose.connect('mongodb+srv://dmejias08:dianap0808@cluster0.k5cccz5.mongodb.net/TecDriveDB2')
+mongoose.connect('mongodb+srv://dmejias08:Computines@cluster0.k5cccz5.mongodb.net/test')
 .then(() => console.log('Now connected to MongoDB!'))
 .catch(err => console.error('Something went wrong', err));
