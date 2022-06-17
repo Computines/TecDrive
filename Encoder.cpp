@@ -2,14 +2,31 @@
 
 using namespace std;
 
-string Encoder::HuffmanEncode(string input)
+Encoder::Encoder()
 {
 
 }
 
-string Encoder::HuffmanDecode(string input)
+string Encoder::HuffmanEncode(string input)
 {
+    huffman = new Huffman();
+    string encode = huffman->encode(input);
+    this->queue = huffman->getQueue();
+    return encode;
 
+}
+
+char* Encoder::getHuffmanQueue()
+{
+    return this->queue;
+}
+
+string Encoder::HuffmanDecode(char* queue, string input)
+{
+    Huffman *huffmanForDecode = new Huffman();
+    string decode = huffmanForDecode->decode(queue, input);
+    huffmanForDecode->~Huffman();
+    return decode;
 }
 
 string Encoder::LZ77Encode(string input)

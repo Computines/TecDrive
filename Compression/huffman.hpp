@@ -33,7 +33,6 @@ private:
     string fileString;
     int stringSize;
     string encodeString;
-    string decodeString;
     map<char, string> codes;
     map<char, int> freq;
     priority_queue<MinHeapNode *, vector<MinHeapNode *>, compare> minHeap;
@@ -44,10 +43,11 @@ private:
     void printCodes(struct MinHeapNode *root, string str);
 
 public:
-    Huffman(string fileString);
+    Huffman();
     ~Huffman(){};
-    string getEncodeString();
-    string getDecodeString();
+    string encode(string fileString);
+    string decode(char* queque, string s);
+    char* getQueue();
 };
 
 #endif

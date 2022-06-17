@@ -7,10 +7,14 @@
 #include <vector>
 #include <algorithm>
 #include <sstream>
-#include "./Compression/LZ77.hpp"
-#include "./Compression/LZ78.hpp"
-#include "./Compression/LZW.hpp"
-#include "./Compression/huffman.hpp"
+#include "Compression/LZ77.hpp"
+#include "Compression/LZ78.hpp"
+#include "Compression/LZW.hpp"
+#include "Compression/huffman.hpp"
+#include "Compression/LZ77.cpp"
+#include "Compression/LZ78.cpp"
+#include "Compression/LZW.cpp"
+#include "Compression/huffman.cpp"
 
 using namespace std;
 
@@ -23,11 +27,13 @@ private:
     LZ77 *lz77 = new LZ77;
     LZ78 *lz78 = new LZ78;
     LZW *lzw = new LZW;
+    char* queue;
 
 public:
-    Encoder(){};
+    Encoder();
+    char* getHuffmanQueue();
     string HuffmanEncode(string input);
-    string HuffmanDecode(string input);
+    string HuffmanDecode(char* queue,string input);
     string LZ77Encode(string input);
     string LZ77Decode(string input);
     string LZ78Encode(string input);

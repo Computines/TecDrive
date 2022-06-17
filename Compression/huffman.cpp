@@ -1,12 +1,23 @@
 #include "huffman.hpp"
 
-Huffman::Huffman(string fileString)
+Huffman::Huffman()
+{
+}
+
+string Huffman::encode(string fileString)
 {
     this->fileString = fileString;
     this->stringSize = fileString.length();
 
     this->calcFreq();
     this->HuffmanCodes();
+
+
+    for (auto i : fileString)
+        this->encodeString += codes[i];
+
+    return this->encodeString;
+
 }
 
 void Huffman::printCodes(struct MinHeapNode *root, string str)
@@ -57,6 +68,7 @@ void Huffman::calcFreq()
 
 string Huffman::decodeFile(struct MinHeapNode *root, string s)
 {
+
     string ans = "";
     struct MinHeapNode *curr = root;
     for (int i = 0; i < s.size(); i++)
@@ -77,15 +89,15 @@ string Huffman::decodeFile(struct MinHeapNode *root, string s)
     return ans + '\0';
 }
 
-string Huffman::getEncodeString()
+string Huffman::decode(char* queue, string s)
 {
-    for (auto i : fileString)
-        this->encodeString += codes[i];
-    return this->encodeString;
+    priority_queue<MinHeapNode *, vector<MinHeapNode *>, compare> *minHeap1 = (priority_queue<MinHeapNode *, vector<MinHeapNode *>, compare>*)queue;
+    string decodeString = this->decodeFile(minHeap1->top(), s);
+    return decodeString;
 }
 
-string Huffman::getDecodeString()
-{
-    this->decodeString = this->decodeFile(minHeap.top(), this->encodeString);
-    return this->decodeString;
+char* Huffman::getQueue(){
+    char *queue = (char *)malloc(sizeof(minHeap));
+    queue = (char *)&minHeap;
+    return queue;
 }
