@@ -6,7 +6,10 @@ import { Link } from "wouter";
 function Header() {
   return (
     <header className="header">
-        <img src={logo} alt="TecBox" className="logo" />
+        <div>
+            <img src={logo} alt="TecBox" className="logo" />
+            <p>tecBox</p>
+        </div>
         <ul className="links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/login">Log In</Link></li>

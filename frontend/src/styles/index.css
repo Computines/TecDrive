@@ -4,8 +4,11 @@
   --bg: #2F3038;
   --text: #fff;
   --text-secondary: #BC3A80;
+  --text-logo: #989898;
   --circle-1: #1762A71A;
   --circle-2: #BC3A801A;
+  --bg-footer: #202027d5;
+  --btn: #1762A7;
 }
 
 body {

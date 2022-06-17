@@ -4,8 +4,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 41px 87px 0 87px;
+    color: var(--text-logo);
+    z-index: 1000;
+}
+.header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .logo {
+    margin-right: 10px;
     width: 60px;
 }
 .links{

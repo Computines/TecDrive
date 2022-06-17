@@ -36,3 +36,13 @@
     height: 600px;
     background-color: var(--circle-2);
 }
+
+.bg-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: var(--bg-footer);
+    z-index: -850;
+}
