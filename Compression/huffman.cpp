@@ -1,9 +1,9 @@
 #include "huffman.hpp"
 
-Huffman::Huffman(string fileString, int stringSize)
+Huffman::Huffman(string fileString)
 {
     this->fileString = fileString;
-    this->stringSize = stringSize;
+    this->stringSize = fileString.length();
 
     this->calcFreq();
     this->HuffmanCodes();
@@ -55,7 +55,7 @@ void Huffman::calcFreq()
         freq[this->fileString[i]]++;
 }
 
-string Huffman::decode_file(struct MinHeapNode *root, string s)
+string Huffman::decodeFile(struct MinHeapNode *root, string s)
 {
     string ans = "";
     struct MinHeapNode *curr = root;
@@ -86,6 +86,6 @@ string Huffman::getEncodeString()
 
 string Huffman::getDecodeString()
 {
-    this->decodeString = this->decode_file(minHeap.top(), this->encodeString);
+    this->decodeString = this->decodeFile(minHeap.top(), this->encodeString);
     return this->decodeString;
 }

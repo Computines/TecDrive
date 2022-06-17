@@ -37,14 +37,15 @@ private:
     map<char, string> codes;
     map<char, int> freq;
     priority_queue<MinHeapNode *, vector<MinHeapNode *>, compare> minHeap;
-    string decode_file(struct MinHeapNode *root, string s);
+    string decodeFile(struct MinHeapNode *root, string s);
     void calcFreq();
     void HuffmanCodes();
     void storeCodes(struct MinHeapNode *root, string str);
     void printCodes(struct MinHeapNode *root, string str);
 
 public:
-    Huffman(string fileString, int stringSize);
+    Huffman(string fileString);
+    ~Huffman(){};
     string getEncodeString();
     string getDecodeString();
 };
