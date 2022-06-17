@@ -1,0 +1,19 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 41px 87px 0 87px;
+}
+.logo {
+    width: 60px;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+.links li{
+    list-style: none;
+}
