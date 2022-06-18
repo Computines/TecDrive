@@ -2,10 +2,6 @@
 
 using namespace std;
 
-Encoder::Encoder()
-{
-
-}
 
 string Encoder::HuffmanEncode(string input)
 {

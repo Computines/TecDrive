@@ -11,10 +11,6 @@
 #include "Compression/LZ78.hpp"
 #include "Compression/LZW.hpp"
 #include "Compression/huffman.hpp"
-#include "Compression/LZ77.cpp"
-#include "Compression/LZ78.cpp"
-#include "Compression/LZW.cpp"
-#include "Compression/huffman.cpp"
 
 using namespace std;
 
@@ -30,7 +26,7 @@ private:
     char* queue;
 
 public:
-    Encoder();
+    Encoder(){};
     char* getHuffmanQueue();
     string HuffmanEncode(string input);
     string HuffmanDecode(char* queue,string input);

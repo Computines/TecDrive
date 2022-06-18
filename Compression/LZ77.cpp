@@ -2,19 +2,6 @@
 
 using namespace std;
 
-vector<string> split(string input, char delimiter)
-{
-    vector<string> tokens;
-    string token;
-    stringstream stream(input);
-
-    while (getline(stream, token, delimiter))
-    {
-        tokens.push_back(token);
-    }
-
-    return tokens;
-}
 
 string LZ77::Encode(string input)
 {

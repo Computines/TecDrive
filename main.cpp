@@ -1,6 +1,4 @@
-#include "Compression/huffman.hpp"
-#include "Compression/huffman.cpp"
-
+#include "Encoder.hpp"
 
 int main()
 {
