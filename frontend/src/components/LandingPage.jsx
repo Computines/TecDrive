@@ -1,5 +1,5 @@
 import React from "react";
-import Background from "./Bacground";
+import Background from "./Background";
 import "../styles/LandingPage.css";
 import landingImg from "../assets/landing.png";
 import { Link } from "wouter";

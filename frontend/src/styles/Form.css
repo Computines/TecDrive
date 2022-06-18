@@ -1,0 +1,38 @@
+.form{
+    background-color: var(--bg-form);
+    border-radius: 25px;
+    width: 425px;
+    height: 375px;
+}
+.form form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.input {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    padding: 0 15px;
+    border: 1px solid var(--btn);
+    color: var(--text);
+    background-color: transparent;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    outline: 1px solid var(--btn);
+    border: 1px solid var(--btn);
+    margin-left: 2px;
+    padding: 0 15px;
+    color: var(--text);
+    background-color: var(--btn);
+    cursor: pointer;
+}

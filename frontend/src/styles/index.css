@@ -9,6 +9,13 @@
   --circle-2: #BC3A801A;
   --bg-footer: #202027d5;
   --btn: #1762A7;
+  --bg-form: #20202799;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {

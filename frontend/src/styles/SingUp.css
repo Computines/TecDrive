@@ -1,0 +1,14 @@
+.singup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.singup h1 {
+    text-align: right;
+}
