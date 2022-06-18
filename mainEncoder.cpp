@@ -8,6 +8,9 @@ int main()
 
     Encoder *encoder = new Encoder();
 
+
+
+    //HUFFMAN
     string encodedString, decodedString, encodedString1, decodedString1;
 
     encodedString = encoder->HuffmanEncode(str);
@@ -35,6 +38,40 @@ int main()
     cout << "\nQueque2 Huffman data:\n" << queue1 << endl;
 
 	cout << "\nDecoded2 Huffman Data:\n" << decodedString1 << endl;
+
+    cout << "---------------------------------------------------------" << endl;
+
+    //LZ78
+
+    string resutlLZ78 = encoder->LZ78Encode(str) ;
+
+    cout << "\nEncoded LZ78 data:\n" << resutlLZ78 << endl;
+
+	cout << "\nDecoded LZ78 Data:\n" << encoder->LZ78Decode(resutlLZ78) << endl;
+
+    cout << "---------------------------------------------------------" << endl;
+
+    //LZW
+
+    string resultLZW = encoder->LZWEncode(str);
+
+    cout << "\nEncoded2 LZW data:\n" << resultLZW << endl;
+
+	cout << "\nDecoded2 lZW Data:\n" << encoder->LZWDecode(resultLZW) << endl;
+
+    cout << "---------------------------------------------------------" << endl;
+
+
+    //LZ77
+
+    string resultLZ77 = encoder->LZ77Encode(str);
+
+    cout << "\nEncoded LZ77 data:\n" << resultLZ77 << endl;
+
+	cout << "\nDecoded LZ77 Data:\n" << encoder->LZ77Decode(resultLZ77) << endl;
+
+
+
 
     return 0;
 }
