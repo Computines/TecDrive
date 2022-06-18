@@ -11,6 +11,11 @@
 #include "Compression/LZ78.hpp"
 #include "Compression/LZW.hpp"
 #include "Compression/huffman.hpp"
+#include "Compression/LZ77.cpp"
+#include "Compression/LZ78.cpp"
+#include "Compression/LZW.cpp"
+#include "Compression/huffman.cpp"
+
 
 using namespace std;
 
