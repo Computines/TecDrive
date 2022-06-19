@@ -3,20 +3,30 @@ import logo from "../assets/logo.svg";
 import "../styles/Header.css";
 import { Link } from "wouter";
 
-function Header() {
-  return (
-    <header className="header">
-        <div>
-            <img src={logo} alt="TecBox" className="logo" />
-            <p>tecBox</p>
-        </div>
-        <ul className="links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/singup">Sing Up</Link></li>
-            <li><Link to="/aboutus">About Us</Link></li>
-        </ul>
-    </header>
+function Header({ user }) {
+    let links = [
+        { name: "About", path: "/aboutus" },
+        { name: "Sing Up", path: "/singup" },
+        { name: "Login", path: "/login" },
+        { name: "Home", path: "/" }
+    ];
+    if (user) {
+        links = [
+            { name: "Log Out", path: "/" }
+        ]
+    }
+    return (
+        <header className="header">
+            <div>
+                <img src={logo} alt="TecBox" className="logo" />
+                <p>tecBox</p>
+            </div>
+            <ul className="links">
+                {links.map(link => {
+                    return <li key={link.name}><Link to={link.path}>{link.name}</Link></li>
+                })}
+            </ul>
+        </header>
     );
 }
 

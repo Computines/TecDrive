@@ -1,5 +1,6 @@
 import React from "react";
 import {v4 as uuidv4} from "uuid";
+import { useLocation } from "wouter";
 import "../styles/Form.css";
 
 function Pair ({name, type}) {
@@ -13,6 +14,8 @@ function Pair ({name, type}) {
 }
 
 function Form(props) {
+
+    const [ , setLocation] = useLocation();
 
     let changes = {
         inputs: [
@@ -48,7 +51,9 @@ function Form(props) {
                         <Pair key={uuidv4()} name={input[0]} type={input[1]}/>
                     )
                 })}
-                <button type="submit" className="submit-btn">{changes.btnText}</button>
+                <button onClick={() => {
+                    setLocation("/user/" + document.getElementById(changes.inputs[0][0] + ":").value);
+                }} className="submit-btn">{changes.btnText}</button>
             </form>
         </div>
     );

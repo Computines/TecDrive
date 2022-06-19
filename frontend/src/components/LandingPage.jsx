@@ -1,5 +1,4 @@
 import React from "react";
-import Background from "./Background";
 import "../styles/LandingPage.css";
 import landingImg from "../assets/landing.png";
 import { Link } from "wouter";
@@ -7,7 +6,6 @@ import { Link } from "wouter";
 function LandingPage() {
   return (
     <div className="landing">
-        <Background bg />
         <img className="landingImage" src={landingImg} alt="Happy Man" />
         <div className="ld-content">
           <h1>Secure Access To Your <b>Files</b></h1>

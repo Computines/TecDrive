@@ -1,0 +1,80 @@
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+
+.card-img{
+    width: 101px;
+    height: 101px;
+    background: var(--gradient);
+    position: relative;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.card-img::after{
+    content: "";
+    display: block;
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-image: url(../assets/Vale.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#card-img-0::after{
+    background-image: url(../assets/Geo.png);
+}
+
+#card-img-1::after{
+    background-image: url(../assets/Diana.png);
+}
+
+#card-img-2::after{
+    background-image: url(../assets/Ram.png);
+}
+
+.card-name{
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.card-content{
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 275;
+    text-align: center;
+    padding: 0 35px;
+}
+
+.card-content::before{
+    content: "";
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 25px;
+    top: 0px;
+    left: -30px;
+    background-image: url(../assets/openQuotes.svg);
+    background-size: cover;
+}
+
+.card-content::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 25px;
+    bottom: 15px;
+    left: 180px;
+    background-image: url(../assets/closeQuotes.svg);
+    background-size: cover;
+}

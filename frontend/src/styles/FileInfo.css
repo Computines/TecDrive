@@ -1,0 +1,6 @@
+.file-info{
+    background-color: var(--bg-userWidget);
+    width: 25%;
+    height: 90%;
+    border-radius: 25px;
+}

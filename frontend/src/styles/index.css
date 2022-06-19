@@ -10,6 +10,8 @@
   --bg-footer: #202027d5;
   --btn: #1762A7;
   --bg-form: #20202799;
+  --gradient: linear-gradient(0, #BC3A80, #1762A7);
+  --bg-userWidget: #20202799;
 }
 
 * {

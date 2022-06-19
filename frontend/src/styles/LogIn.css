@@ -11,4 +11,10 @@
 
 .login h1 {
     text-align: right;
+    padding-left: 21px;
+}
+
+.forget{
+    text-align: center;
+    width: 100%;
 }
