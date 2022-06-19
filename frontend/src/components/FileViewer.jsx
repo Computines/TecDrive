@@ -5,7 +5,7 @@ function FileViewer() {
   return (
     <div className="file-viewer">
       <div className="file-viewer-header">
-        <p>Names</p>
+        <p>Name</p>
         <p>Size</p>
       </div>
       <hr />

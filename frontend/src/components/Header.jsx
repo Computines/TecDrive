@@ -6,7 +6,7 @@ import { Link } from "wouter";
 function Header({ user }) {
     let links = [
         { name: "About", path: "/aboutus" },
-        { name: "Sing Up", path: "/singup" },
+        { name: "Sign Up", path: "/singup" },
         { name: "Login", path: "/login" },
         { name: "Home", path: "/" }
     ];

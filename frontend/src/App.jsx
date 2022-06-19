@@ -5,6 +5,7 @@ import SingUp from './components/SingUp';
 import LogIn from './components/LogIn';
 import UserPage from './components/UserPage';
 import AboutUs from './components/AboutUs';
+import Upload from './components/Upload';
 import { Route } from "wouter";
 import './styles/App.css';
 
@@ -19,6 +20,8 @@ function App() {
       <Route path="/aboutus"><Header /><AboutUs /></Route>
       <Route path='/user/:username' ><Header user /></Route>
       <Route path='/user/:username' component={UserPage} />
+      <Route path='/user/:username/upload' ><Header user /></Route>
+      <Route path='/user/:username/upload' component={Upload} />
     </div>
   );
 }
