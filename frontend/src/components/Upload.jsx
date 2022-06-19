@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Global from "../Global";
 import { useLocation } from "wouter";
@@ -10,6 +10,8 @@ function Upload({ params }) {
 
     const fileRef = React.createRef();
     const tagsRef = React.createRef();
+
+    const [file, setFile] = useState("Select File");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -39,6 +41,11 @@ function Upload({ params }) {
             });
     };
 
+    const handleChange = (e) => {
+        if (document.getElementById("file")) {
+            setFile(document.getElementById("file").value.substring(12));
+        }
+    };
     return (
         <div className="upload">
             <div className="upload-content">
@@ -46,13 +53,14 @@ function Upload({ params }) {
                     Upload Your <b>File.</b>
                 </h1>
                 <form onSubmit={handleSubmit} className="upload-form">
-                    <label htmlFor="file">Select file</label>
+                    <label htmlFor="file">{file}</label>
                     <input
                         type="file"
                         id="file"
                         name="uploadedFile"
                         ref={fileRef}
                         className="file-input"
+                        onChange={handleChange}
                     />
                     <label htmlFor="tag">Tag: </label>
                     <input
