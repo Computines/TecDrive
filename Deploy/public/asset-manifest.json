@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.360ad9e5.css",
+    "main.js": "./static/js/main.52ef3a60.js",
+    "static/js/787.cda612ba.chunk.js": "./static/js/787.cda612ba.chunk.js",
+    "static/media/landing.png": "./static/media/landing.0cf2c3fc64409b1ec927.png",
+    "static/media/Geo.png": "./static/media/Geo.5e96ebe1c174f70404f4.png",
+    "static/media/Vale.png": "./static/media/Vale.01d380319bc2c519a3a9.png",
+    "static/media/Ram.png": "./static/media/Ram.f2ac719954b8ebd6bd7e.png",
+    "static/media/Diana.png": "./static/media/Diana.de0d3e8535ed47986bc7.png",
+    "static/media/logo.svg": "./static/media/logo.9c85cf29e58046052d2abc8221a3c908.svg",
+    "static/media/upload.svg": "./static/media/upload.4d3d449bb2ba1b53440a9a6dedc385f9.svg",
+    "static/media/download.svg": "./static/media/download.4051f3a0e01b4ae062a7bb03c67e94f1.svg",
+    "static/media/closeQuotes.svg": "./static/media/closeQuotes.d41f993460a6f15693dc.svg",
+    "static/media/openQuotes.svg": "./static/media/openQuotes.aa0dc24bf2bc8f821a71.svg",
+    "index.html": "./index.html",
+    "main.360ad9e5.css.map": "./static/css/main.360ad9e5.css.map",
+    "main.52ef3a60.js.map": "./static/js/main.52ef3a60.js.map",
+    "787.cda612ba.chunk.js.map": "./static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.360ad9e5.css",
+    "static/js/main.52ef3a60.js"
+  ]
+}
