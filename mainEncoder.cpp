@@ -41,6 +41,16 @@ int main()
 
     cout << "---------------------------------------------------------" << endl;
 
+    //LZ77
+
+    string resutlLZ77 = encoder->LZ77Encode(str) ;
+
+    cout << "\nEncoded LZ77 data:\n" << resutlLZ77 << endl;
+
+	cout << "\nDecoded LZ77 Data:\n" << encoder->LZ77Decode(resutlLZ77) << endl;
+
+    cout << "---------------------------------------------------------" << endl;
+
     //LZ78
 
     string resutlLZ78 = encoder->LZ78Encode(str) ;
