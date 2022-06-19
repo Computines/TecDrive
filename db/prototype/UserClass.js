@@ -1,86 +1,84 @@
 const User = require("../models/user")
 
-class UserClass {
+const UserClass = {
 
-    createUser = async function (name, lastName, username, password, email) {
-        try {
-            const user = new User({
-                name,
-                lastName,
-                username,
-                password,
-                email,
-            });
-            const result = await user.save();
-            console.log("SE AGREGA LO SIGUIENTE:")
-            console.log(result);
-        }
-        catch (err) {
+    createUser: (req, res) => {
+        const params = req.body;
+        names = params.name;
+        lastName = params.lastName;
+        username = params.username;
+        password = params.password;
+        email = params.email;
 
-            console.log('Usuario y/o email ya han sido registrados en el sistema')
-        }
-    }
+        const user = new User({
+            names,
+            lastName,
+            username,
+            password,
+            email,
+        });
 
-    verifyLogInWithUsername = async function (username, password) {
-        const user = await User.find({ "username": username })
+        user.save((err, result) => {
+            if (err) {
+                res.send("Ya existe el usuario y/o correo electronico")
+            }
+            res.send(result)
+        })
+    },
+
+    verifyLogInWithUsername: (req, res) => {
+        const params = req.body;
+        const user = User.find({ "username": params.username })
         console.log(user[0])
-        this.verifyLogIn(user, password)
-    }
+        res.send(this.verifyLogIn(user, params.password))
 
-    verifyLogInWithEmail = async function (email, password) {
-        const user = await User.find({ "email": email })
+    },
+
+    verifyLogInWithUsername: (req, res) => {
+        const params = req.body;
+        const user = User.find({ "email": params.email })
         console.log(user[0])
-        this.verifyLogIn(user, password)
-    }
+        res.send(this.verifyLogIn(user, params.password))
+    },
 
-    verifyLogIn = async function (user, password) {
+    verifyLogIn: (req, res) => {
+        const params = req.body;
+        const user = params.user
         const userPassword = user[0].password
         if (userPassword == password) {
             console.log("Verificado")
-            return true
+            res.send(true)
         }
         console.log("No verificado")
-        return false
-    }
+        res.send(false)
+    },
 
-    listUser = async function () {
-        const user = await User
-            .find()
-        console.log(user);
-    }
-
-    findUser = async function (username) {
-        try {
-            const user = await User
-                .find({ 'username': username })
-            console.log(user[0]);
-            return user
-        }
-        catch {
-            console.log("No pudo encontrar usuario")
-        }
-    }
-
-    changePassword = async function (username, currentPassword, newPassword) {
-        try {
-            const user = await User.find({ "username": username })
-            if (user[0].password == currentPassword) {
-                const user2 = await User.findOneAndUpdate({"username": username}, {$set: {"password": newPassword}});
-                user2.save();
-                console.log("Contraseña modificada con exito")
-            } else {
-                console.log("Contraseña ingresada es incorrecta")
+    listUsers: (req, res) => {
+        User.find((err, users) => {
+            if (err) {
+                res.send(err)
             }
-        } catch {
-            console.log("No se encuentra el usuario")
-        }
-    }
+            res.send(users)
+        })
+    },
 
-    deleteUser = async function (owner) {
-        User.deleteOne({ "owner": owner }, function (err) {
-            if (err) return handleError(err);
+    findUser : (req, res)=>{
+        const params = req.body
+        User.find({'usename' : params.usename}, (err, user) =>{
+            if(err){
+                res.send("No pudo encontrar usuario")
+            }
+            res.send(user)
+        })
+    },
+
+    deleUser : (req, res) =>{
+        const params = req.body
+        User.deleteOne({ "owner": params.owner},(err) =>{
+            if (err) res.send(handleError(err));
+            res.send("Delete succesfully")
         });
-    }
+    },
 
 }
 module.exports = UserClass

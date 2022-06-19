@@ -8,7 +8,7 @@ fileClass = new File()
 userClass = new User()
 
 
-console.log("findByName")
+// console.log("findByName")
 // fileClass.findFileByName("ProyectoFinal", "./Documents","Ramsensei")
 // console.log("findByTag")
 // fileClass.findFileByTag("Urgente", "Diani08")
@@ -20,7 +20,7 @@ console.log("findByName")
 // userClass.createUser("Valesska", "Blanco", "Valesska.blanco", "blabla", "vale22@email.com")
 // userClass.createUser("Rashell", "Aguilar", "Rei1007", "blabla", "rei1007@email.com")
 // userClass.createUser("Juan", "Navarro", "JuanNava", "blabla", "juanignava@email.com")
-// userClass.createUser("Geovanny", "Garcia", "Geo", "blabla", "geogardow@email.com")
+userClass.createUser("hfgdfg", "gdfh", "dfhdf", "blabla", "geogow@email.com")
 
 // fileClass.createFile("DiagramaClases", ["Urgente","No urge"], "./Documents", "Diani08", 512)
 
@@ -35,12 +35,12 @@ console.log("findByName")
 // fileClass.addTagToFile("ProyectoLabActivos", "LISTO", "./Documents/TEC/SemestreI2022", "Rei1007" )
 
 // fileClass.listFile()
-async function main() {
-    const user_finded = await userClass.findUser("Rei1007")
-    console.log(user_finded)
-}
+// async function main() {
+//     const user_finded = await userClass.findUser("Rei1007")
+//     console.log(user_finded)
+// }
 
-main()
+// main()
 // fileClass.changeFileName("ProyectoLabActivos", "nuevoProyectoActivos","./Documents/TEC/SemestreI2022", "Diani08")
 
 // userClass.changePassword("JuanNava", "blabla", "newBlabla")
