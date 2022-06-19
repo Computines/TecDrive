@@ -1,0 +1,73 @@
+.upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 78.14px);
+    padding: 20px;
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-userWidget);
+    width: 40%;
+    height: 70%;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.tag-input {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    padding: 0 15px;
+    border: 1px solid var(--btn);
+    color: var(--text);
+    background-color: transparent;
+}
+
+.upload-form button {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    outline: 1px solid var(--btn);
+    border: 1px solid var(--btn);
+    margin-left: 2px;
+    padding: 0 15px;
+    color: var(--text);
+    background-color: var(--btn);
+    cursor: pointer;
+}
+.upload-form label[for="file"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    outline: 1px solid var(--btn);
+    border: 1px solid var(--btn);
+    margin-left: 2px;
+    color: var(--text);
+    padding: 5px;
+    background-color: var(--btn);
+    text-align: center;
+    cursor: pointer;
+}
+.file-input {
+    visibility: hidden;
+    width: 100%;
+    position: relative;
+}
+

@@ -3,4 +3,38 @@
     width: 25%;
     height: 90%;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: flex-start;
 }
+
+.addTag {
+    display: flex;
+    flex-direction: row;
+}
+
+.addTag input{
+    width: 60%;
+    height: 35px;
+    border-radius: 10px;
+    padding: 0 15px;
+    border: 1px solid var(--btn);
+    color: var(--text);
+    background-color: transparent;
+}
+.addTag button {
+    width: 30%;
+    height: 35px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    outline: 1px solid var(--btn);
+    border: 1px solid var(--btn);
+    margin-left: 10px;
+    padding: 0 15px;
+    color: var(--text);
+    background-color: var(--btn);
+    cursor: pointer;
+}
+
