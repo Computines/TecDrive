@@ -76,7 +76,30 @@ function Form(props) {
         e.preventDefault();
         handleChange();
         if (props.formType === "login") {
-        
+            if (user.username.includes("@")) {
+                axios.post(`${url}/emaillogin`, user)
+                .then(res => {
+                    if (res.data.success) {
+                        setLocation("/user/" + user.username);
+                    }
+                    else 
+                    {
+                        alert(res.data.message);
+                    }
+                })
+            }
+            else {
+                axios.post(`${url}/userlogin`, user)
+                .then(res => {
+                    if (res.data.success) {
+                        setLocation("/user/" + user.username);
+                    }
+                    else 
+                    {
+                        alert(res.data.message);
+                    }
+                })
+            }
         }
         else {
             axios.post(url + "/create", user)

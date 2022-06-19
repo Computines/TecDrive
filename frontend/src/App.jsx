@@ -20,8 +20,8 @@ function App() {
       <Route path="/aboutus"><Header /><AboutUs /></Route>
       <Route path='/user/:username' ><Header user /></Route>
       <Route path='/user/:username' component={UserPage} />
-      <Route path='/user/:username/upload' ><Header user /></Route>
-      <Route path='/user/:username/upload' component={Upload} />
+      <Route path='/upload/:username' ><Header user /></Route>
+      <Route path='/upload/:username' component={Upload} />
     </div>
   );
 }

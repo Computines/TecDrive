@@ -4,15 +4,18 @@ import FileViewer from "./FileViewer";
 import FileInfo from "./FileInfo";
 import download from "../assets/download.svg";
 import upload from "../assets/upload.svg";
+import { useLocation } from "wouter";
 
 function UserPage({ params }) {
+
+    const [, setLocation] = useLocation();
 
     const down = () => {
         console.log("download");
     }
 
     const up = () => {
-        console.log("upload");
+        setLocation("/upload/" + params.username);
     }
 
     return (
